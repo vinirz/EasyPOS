@@ -9,8 +9,8 @@ export default function DownloadButton(){
     useEffect(() => {
         async function getData(){
             const response = await axios.get('/api/update')
-            console.log(response.data[0].link)
-            setPath(response.data[0].link)
+            console.log(response.data.link)
+            setPath(response.data.link)
         }
 
         getData()
